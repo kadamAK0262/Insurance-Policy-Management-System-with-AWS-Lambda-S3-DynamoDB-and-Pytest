@@ -1,0 +1,108 @@
+Json data of usecase 4:
+
+Create
+
+{
+  "operation": "create",
+  "policy_data": [
+    {
+      "policy number": "a12",
+      "insurance type": "car",
+      "policy start date": "2023-06-10",
+      "policy end date": "2024-06-10",
+      "renewal status": "renewed",
+      "insured member": "John Doe",
+      "renewed by": "admin",
+      "policy status": "active"
+    },
+    {
+      "policy number": "b12",
+      "insurance type": "life",
+      "policy start date": "2023-06-10",
+      "policy end date": "2024-06-10",
+      "renewal status": "renewed",
+      "insured member": "Jane Doe",
+      "renewed by": "admin",
+      "policy status": "active"
+    }
+  ]
+}
+
+
+{
+    "operation": "create",
+    "policy_data": [
+        {
+            "policy number": "123ABC",
+            "insurance type": "car",
+            "policy start date": "2024-06-14",
+            "policy end date": "2025-06-14",
+            "renewal status": "renewed",
+            "insured member": "John Doe",
+            "renewed by": "JD123",
+            "policy status": "active"
+        },
+        {
+            "policy number": "456DEF",
+            "insurance type": "life",
+            "policy start date": "2024-06-14",
+            "policy end date": "2044-06-14",
+            "renewal status": "terminated",
+            "insured member": "Jane Smith",
+            "renewed by": "JS456",
+            "policy status": "inactive"
+        }
+    ]
+}
+
+
+
+Read : 
+
+Read All Policies
+
+{
+    "operation": "read"
+}
+
+Read a Specific Policy
+
+{
+    "operation": "read",
+    "policy number": "123",
+    "date": "2024-06-16"
+}
+
+Update :
+
+{
+    "operation": "update",
+    "updated_policy_data": [
+        {
+            "policy number": "a12",
+            "insurance type": "health",
+            "policy start date": "2024-01-01",
+            "policy end date": "2024-12-31",
+            "renewal status": "renewed",
+            "insured member": "Akshay",
+            "renewed by": "JD123",
+            "policy status": "active"
+        }
+    ],
+    "date": "2024-06-17"
+}
+
+
+Delete :
+{
+    "operation": "delete",
+    "policy number": "a12",
+    "date": "2024-06-17"
+}
+
+
+End of Day Update Operation:
+
+{
+    "operation": "end_of_day_update"
+}

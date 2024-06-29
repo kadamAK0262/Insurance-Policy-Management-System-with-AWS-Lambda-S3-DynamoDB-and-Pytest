@@ -1,0 +1,41 @@
+pytest --cache-clear
+
+pip install pytest-cov
+pytest --cov=your_module test_add.py
+pytest --cov=. test_add.py
+
+pytest --cov=update --cov-report=html
+
+pytest --full-trace test_deletes.py
+
+pip install pytest-timeout
+
+pytest --timeout=60
+
+
+pytest -k "test_delete_policy_successful"
+pytest -k "test_delete_policy_data_not_found"
+pytest -k "test_delete_policy_internal_server_error"
+
+export PYTHONPATH=$PYTHONPATH:$(pwd)/python
+
+python -m pytest --cov-report-html
+
+
+***********In requirement.txt file: ******************
+
+pip freeze > requirements.txt
+
+boto3==1.17.49
+pytest==6.2.4
+pytest-mock==3.6.1
+
+boto3==1.24.12
+pytest==7.1.2
+mock==4.0.3
+
+pip install boto3 pytest mock
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
+
